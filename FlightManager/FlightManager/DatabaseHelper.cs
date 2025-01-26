@@ -34,12 +34,12 @@ namespace FlightManager
             {
             	 MessageBox.Show("Arquivo ja criado e conexão com o banco aberta");
             }
-            string databaseFile = DatabaseFile;
+            const string databaseFile = DatabaseFile;
 			string connectionString = string.Format("Data Source={0};Version=3;", databaseFile);
 			connection = new SQLiteConnection(connectionString);
             connection.Open();
 
-            string createTableQuery = @"
+           const string createTableQuery = @"
                 CREATE TABLE IF NOT EXISTS TB_VOO (
                     ID_VOO INTEGER PRIMARY KEY AUTOINCREMENT,
                     DATA_VOO DATETIME,
