@@ -1,9 +1,30 @@
-bin/ 
-obj/ 
-*.user/ 
-*.suo/ 
-bin/ 
-obj/ 
-*.user/ 
-*.suo/ 
-nuget/ 
+# Ignorar dependências e arquivos gerados pelo SharpDevelop
+
+# Pasta bin e obj (arquivos compilados)
+bin/
+obj/
+
+# Configurações específicas de IDE
+*.userprefs
+
+# Dependências gerenciadas pelo NuGet
+packages/
+*.nupkg
+
+# Arquivos de log
+*.log
+
+# Arquivos de cache e temporários
+*.tmp
+*.suo
+*.user
+*.cache
+*.csproj.user
+
+# Arquivos específicos do SQLite (caso precise ignorar o banco local, se necessário)
+acme.sqlite
+acme.sqlite-journal
+
+# Ignorar arquivos específicos do sistema operacional
+Thumbs.db
+.DS_Store
