@@ -1,4 +1,4 @@
-﻿/*
+﻿﻿/*
  * Created by SharpDevelop.
  * User: Family
  * Date: 26/01/2025
@@ -29,12 +29,20 @@ namespace FlightManager
 			//
 			InitializeComponent();
 			accessDatabase = new DatabaseHelper();
-			accessDatabase.InitializeDatabase();
+			InitializeDatabaseAndFlights();
 			
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+           private void LstVoosSelectedIndexChanged(object sender, EventArgs e)
+    {
+        // Manipulação do evento de seleção do ListView
+    }
+           private void InitializeDatabaseAndFlights(){
+           	accessDatabase.InitializeDatabase();
+           	accessDatabase.LoadFlights(lstVoos);
+           }
 		
 	}
 }
